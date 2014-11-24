@@ -83,6 +83,7 @@ public class UsuarioDAO {
 
 
 			preparador.close();
+			resultado.close();
 
 
 
@@ -124,6 +125,8 @@ public class UsuarioDAO {
 
 			}
 
+			preparador.close();
+			resultado.close();
 
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block

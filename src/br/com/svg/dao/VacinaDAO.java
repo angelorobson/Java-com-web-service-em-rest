@@ -82,7 +82,8 @@ public class VacinaDAO {
 			}
 
 
-			
+			preparador.close();
+			resultado.close();
 
 			System.out.println("Vacinas listadas com Sucesso");
 		} catch (SQLException e) {
@@ -91,6 +92,7 @@ public class VacinaDAO {
 			e.printStackTrace();
 			System.out.println("erro: " + e.getMessage());
 		}
+		
 		return lista;
 	}
 
@@ -119,6 +121,9 @@ public class VacinaDAO {
 				vacina.setLote(resultado.getString("lote"));
 
 			}
+			
+			resultado.close();
+			preparador.close();
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
